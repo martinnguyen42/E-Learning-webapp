@@ -7,8 +7,10 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
-	<context:component-scan base-package="com.vng.elearning.controller"></context:component-scan>	
+	<context:component-scan base-package="com.vng.elearning.controller" />	
 	<mvc:annotation-driven/>
+	<mvc:resources location="/resources/" mapping="/assets/**" />
+	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- Start at webapp/...<path>... -->
 		<property name="prefix" value="/WEB-INF/views/"></property>
